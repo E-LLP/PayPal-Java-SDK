@@ -1,5 +1,12 @@
 package com.paypal.api.payments;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class CountryCode  {
 
 	/**
@@ -19,21 +26,4 @@ public class CountryCode  {
 	public CountryCode(String countryCode) {
 		this.countryCode = countryCode;
 	}
-
-
-	/**
-	 * Setter for countryCode
-	 */
-	public CountryCode setCountryCode(String countryCode) {
-		this.countryCode = countryCode;
-		return this;
-	}
-
-	/**
-	 * Getter for countryCode
-	 */
-	public String getCountryCode() {
-		return this.countryCode;
-	}
-
 }

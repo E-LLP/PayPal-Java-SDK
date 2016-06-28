@@ -5,6 +5,13 @@ import com.paypal.base.rest.PayPalModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class PaymentHistory  extends PayPalModel {
 
 	/**
@@ -28,54 +35,4 @@ public class PaymentHistory  extends PayPalModel {
 	public PaymentHistory() {
 		payments = new ArrayList<Payment>();
 	}
-
-
-	/**
-	 * Setter for payments
-	 */
-	public PaymentHistory setPayments(List<Payment> payments) {
-		this.payments = payments;
-		return this;
-	}
-
-	/**
-	 * Getter for payments
-	 */
-	public List<Payment> getPayments() {
-		return this.payments;
-	}
-
-
-	/**
-	 * Setter for count
-	 */
-	public PaymentHistory setCount(int count) {
-		this.count = count;
-		return this;
-	}
-
-	/**
-	 * Getter for count
-	 */
-	public int getCount() {
-		return this.count;
-	}
-
-
-	/**
-	 * Setter for nextId
-	 */
-	public PaymentHistory setNextId(String nextId) {
-		this.nextId = nextId;
-		return this;
-	}
-
-	/**
-	 * Getter for nextId
-	 */
-	public String getNextId() {
-		return this.nextId;
-	}
-
-
 }

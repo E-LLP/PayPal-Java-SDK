@@ -3,6 +3,13 @@ package com.paypal.api.payments;
 import com.paypal.base.rest.PayPalModel;
 
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class AgreementStateDescriptor  extends PayPalModel {
 
 	/**
@@ -27,38 +34,4 @@ public class AgreementStateDescriptor  extends PayPalModel {
 	public AgreementStateDescriptor(Currency amount) {
 		this.amount = amount;
 	}
-
-
-	/**
-	 * Setter for note
-	 */
-	public AgreementStateDescriptor setNote(String note) {
-		this.note = note;
-		return this;
-	}
-
-	/**
-	 * Getter for note
-	 */
-	public String getNote() {
-		return this.note;
-	}
-
-
-	/**
-	 * Setter for amount
-	 */
-	public AgreementStateDescriptor setAmount(Currency amount) {
-		this.amount = amount;
-		return this;
-	}
-
-	/**
-	 * Getter for amount
-	 */
-	public Currency getAmount() {
-		return this.amount;
-	}
-
-
 }

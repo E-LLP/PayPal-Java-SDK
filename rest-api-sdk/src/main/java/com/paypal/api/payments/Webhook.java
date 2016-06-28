@@ -4,6 +4,13 @@ import com.paypal.base.rest.*;
 
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class Webhook  extends PayPalResource {
 
 	/**
@@ -38,70 +45,6 @@ public class Webhook  extends PayPalResource {
 	public Webhook(String url, List<EventType> eventTypes) {
 		this.url = url;
 		this.eventTypes = eventTypes;
-	}
-
-
-	/**
-	 * Setter for id
-	 */
-	public Webhook setId(String id) {
-		this.id = id;
-		return this;
-	}
-
-	/**
-	 * Getter for id
-	 */
-	public String getId() {
-		return this.id;
-	}
-
-
-	/**
-	 * Setter for url
-	 */
-	public Webhook setUrl(String url) {
-		this.url = url;
-		return this;
-	}
-
-	/**
-	 * Getter for url
-	 */
-	public String getUrl() {
-		return this.url;
-	}
-
-
-	/**
-	 * Setter for eventTypes
-	 */
-	public Webhook setEventTypes(List<EventType> eventTypes) {
-		this.eventTypes = eventTypes;
-		return this;
-	}
-
-	/**
-	 * Getter for eventTypes
-	 */
-	public List<EventType> getEventTypes() {
-		return this.eventTypes;
-	}
-
-
-	/**
-	 * Setter for links
-	 */
-	public Webhook setLinks(List<Links> links) {
-		this.links = links;
-		return this;
-	}
-
-	/**
-	 * Getter for links
-	 */
-	public List<Links> getLinks() {
-		return this.links;
 	}
 	
 	/**

@@ -5,6 +5,13 @@ import com.paypal.base.rest.PayPalModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class EventTypeList  extends PayPalModel {
 
 	/**
@@ -18,22 +25,4 @@ public class EventTypeList  extends PayPalModel {
 	public EventTypeList() {
 		eventTypes = new ArrayList<EventType>();
 	}
-
-
-	/**
-	 * Setter for eventTypes
-	 */
-	public EventTypeList setEventTypes(List<EventType> eventTypes) {
-		this.eventTypes = eventTypes;
-		return this;
-	}
-
-	/**
-	 * Getter for eventTypes
-	 */
-	public List<EventType> getEventTypes() {
-		return this.eventTypes;
-	}
-
-
 }

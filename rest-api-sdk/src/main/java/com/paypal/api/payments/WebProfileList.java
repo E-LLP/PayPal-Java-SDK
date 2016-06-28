@@ -3,6 +3,13 @@ package com.paypal.api.payments;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class WebProfileList  extends ArrayList<WebProfile> {
 
 	/**
@@ -17,21 +24,5 @@ public class WebProfileList  extends ArrayList<WebProfile> {
 	 */
 	public WebProfileList() {
 		webProfiles = new ArrayList<WebProfile>();
-	}
-
-
-	/**
-	 * Setter for items
-	 */
-	public List<WebProfile> setWebProfileList(List<WebProfile> webProfiles) {
-		this.webProfiles = webProfiles;
-		return this.webProfiles;
-	}
-
-	/**
-	 * Getter for items
-	 */
-	public List<WebProfile> getWebProfileLists() {
-		return this.webProfiles;
 	}
 }

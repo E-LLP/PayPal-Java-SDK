@@ -2,6 +2,13 @@ package com.paypal.api.payments;
 
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class InstallmentInfo  {
 
 	/**
@@ -36,69 +43,4 @@ public class InstallmentInfo  {
 	public InstallmentInfo(List<InstallmentOption> installmentOptions) {
 		this.installmentOptions = installmentOptions;
 	}
-
-
-	/**
-	 * Setter for installmentId
-	 */
-	public InstallmentInfo setInstallmentId(String installmentId) {
-		this.installmentId = installmentId;
-		return this;
-	}
-
-	/**
-	 * Getter for installmentId
-	 */
-	public String getInstallmentId() {
-		return this.installmentId;
-	}
-
-
-	/**
-	 * Setter for network
-	 */
-	public InstallmentInfo setNetwork(String network) {
-		this.network = network;
-		return this;
-	}
-
-	/**
-	 * Getter for network
-	 */
-	public String getNetwork() {
-		return this.network;
-	}
-
-
-	/**
-	 * Setter for issuer
-	 */
-	public InstallmentInfo setIssuer(String issuer) {
-		this.issuer = issuer;
-		return this;
-	}
-
-	/**
-	 * Getter for issuer
-	 */
-	public String getIssuer() {
-		return this.issuer;
-	}
-
-
-	/**
-	 * Setter for installmentOptions
-	 */
-	public InstallmentInfo setInstallmentOptions(List<InstallmentOption> installmentOptions) {
-		this.installmentOptions = installmentOptions;
-		return this;
-	}
-
-	/**
-	 * Getter for installmentOptions
-	 */
-	public List<InstallmentOption> getInstallmentOptions() {
-		return this.installmentOptions;
-	}
-
 }

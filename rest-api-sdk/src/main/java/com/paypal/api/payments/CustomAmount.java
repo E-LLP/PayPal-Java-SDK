@@ -3,6 +3,13 @@ package com.paypal.api.payments;
 import com.paypal.base.rest.PayPalModel;
 
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class CustomAmount  extends PayPalModel {
 
 	/**
@@ -20,38 +27,4 @@ public class CustomAmount  extends PayPalModel {
 	 */
 	public CustomAmount() {
 	}
-
-
-	/**
-	 * Setter for label
-	 */
-	public CustomAmount setLabel(String label) {
-		this.label = label;
-		return this;
-	}
-
-	/**
-	 * Getter for label
-	 */
-	public String getLabel() {
-		return this.label;
-	}
-
-
-	/**
-	 * Setter for amount
-	 */
-	public CustomAmount setAmount(Currency amount) {
-		this.amount = amount;
-		return this;
-	}
-
-	/**
-	 * Getter for amount
-	 */
-	public Currency getAmount() {
-		return this.amount;
-	}
-
-
 }

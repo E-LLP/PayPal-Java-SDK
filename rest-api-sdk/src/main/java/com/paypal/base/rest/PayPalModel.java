@@ -1,9 +1,6 @@
 package com.paypal.base.rest;
 
-import java.io.Serializable;
-
-public class PayPalModel implements Serializable {
-	// private static final long serialVersionUID = -870239909411700476L;
+public class PayPalModel {
 	
 	/**
 	 * Returns a JSON string corresponding to object state
@@ -28,9 +25,7 @@ public class PayPalModel implements Serializable {
 	    if (!(obj instanceof PayPalModel))
 	    	return false;
 	    PayPalModel objClass = (PayPalModel)obj;
-	    if (objClass.toJSON().equals(toJSON())) 
-	    	return true;
-	    return false;
+	    return objClass.toJSON().equals(toJSON());
 	}
 	
 	@Override

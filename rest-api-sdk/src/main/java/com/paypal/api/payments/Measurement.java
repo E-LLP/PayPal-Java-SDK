@@ -1,5 +1,12 @@
 package com.paypal.api.payments;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class Measurement {
 	
 	/**
@@ -11,20 +18,4 @@ public class Measurement {
 	 * Unit in which the value is represented.
 	 */
 	private String unit;
-
-	public String getValue() {
-		return value;
-	}
-
-	public void setValue(String value) {
-		this.value = value;
-	}
-
-	public String getUnit() {
-		return unit;
-	}
-
-	public void setUnit(String unit) {
-		this.unit = unit;
-	}
 }

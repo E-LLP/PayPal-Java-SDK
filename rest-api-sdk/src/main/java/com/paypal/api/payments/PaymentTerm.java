@@ -3,6 +3,13 @@ package com.paypal.api.payments;
 import com.paypal.base.rest.PayPalModel;
 
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class PaymentTerm  extends PayPalModel {
 
 	/**
@@ -20,38 +27,4 @@ public class PaymentTerm  extends PayPalModel {
 	 */
 	public PaymentTerm() {
 	}
-
-
-	/**
-	 * Setter for termType
-	 */
-	public PaymentTerm setTermType(String termType) {
-		this.termType = termType;
-		return this;
-	}
-
-	/**
-	 * Getter for termType
-	 */
-	public String getTermType() {
-		return this.termType;
-	}
-
-
-	/**
-	 * Setter for dueDate
-	 */
-	public PaymentTerm setDueDate(String dueDate) {
-		this.dueDate = dueDate;
-		return this;
-	}
-
-	/**
-	 * Getter for dueDate
-	 */
-	public String getDueDate() {
-		return this.dueDate;
-	}
-
-
 }

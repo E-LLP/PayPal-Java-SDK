@@ -1,9 +1,19 @@
 package com.paypal.api.payments;
 
-import com.paypal.base.rest.PayPalModel;
-
 import java.util.List;
 
+import com.paypal.base.rest.PayPalModel;
+
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class PayoutItemDetails extends PayPalModel {
 
 	/**
@@ -74,128 +84,7 @@ public class PayoutItemDetails extends PayPalModel {
 		this.payoutItem = payoutItem;
 		this.timeProcessed = timeProcessed;
 	}
-
-	/**
-	 * Setter for payoutItemId
-	 */
-	public PayoutItemDetails setPayoutItemId(String payoutItemId) {
-		this.payoutItemId = payoutItemId;
-		return this;
-	}
-
-	/**
-	 * Getter for payoutItemId
-	 */
-	public String getPayoutItemId() {
-		return this.payoutItemId;
-	}
-
-	/**
-	 * Setter for transactionId
-	 */
-	public PayoutItemDetails setTransactionId(String transactionId) {
-		this.transactionId = transactionId;
-		return this;
-	}
-
-	/**
-	 * Getter for transactionId
-	 */
-	public String getTransactionId() {
-		return this.transactionId;
-	}
-
-	/**
-	 * Setter for transactionStatus
-	 */
-	public PayoutItemDetails setTransactionStatus(
-			String transactionStatus) {
-		this.transactionStatus = transactionStatus;
-		return this;
-	}
-
-	/**
-	 * Getter for transactionStatus
-	 */
-	public String getTransactionStatus() {
-		return this.transactionStatus;
-	}
-
-	/**
-	 * Setter for payoutItemFee
-	 */
-	public PayoutItemDetails setPayoutItemFee(Currency payoutItemFee) {
-		this.payoutItemFee = payoutItemFee;
-		return this;
-	}
-
-	/**
-	 * Getter for payoutItemFee
-	 */
-	public Currency getPayoutItemFee() {
-		return this.payoutItemFee;
-	}
-
-	/**
-	 * Setter for payoutBatchId
-	 */
-	public PayoutItemDetails setPayoutBatchId(String payoutBatchId) {
-		this.payoutBatchId = payoutBatchId;
-		return this;
-	}
-
-	/**
-	 * Getter for payoutBatchId
-	 */
-	public String getPayoutBatchId() {
-		return this.payoutBatchId;
-	}
-
-	/**
-	 * Setter for senderBatchId
-	 */
-	public PayoutItemDetails setSenderBatchId(String senderBatchId) {
-		this.senderBatchId = senderBatchId;
-		return this;
-	}
-
-	/**
-	 * Getter for senderBatchId
-	 */
-	public String getSenderBatchId() {
-		return this.senderBatchId;
-	}
-
-	/**
-	 * Setter for payoutItem
-	 */
-	public PayoutItemDetails setPayoutItem(PayoutItem payoutItem) {
-		this.payoutItem = payoutItem;
-		return this;
-	}
-
-	/**
-	 * Getter for payoutItem
-	 */
-	public PayoutItem getPayoutItem() {
-		return this.payoutItem;
-	}
-
-	/**
-	 * Setter for timeProcessed
-	 */
-	public PayoutItemDetails setTimeProcessed(String timeProcessed) {
-		this.timeProcessed = timeProcessed;
-		return this;
-	}
-
-	/**
-	 * Getter for timeProcessed
-	 */
-	public String getTimeProcessed() {
-		return this.timeProcessed;
-	}
-
+	
 	/**
 	 * Setter for error
 	 */
@@ -211,35 +100,4 @@ public class PayoutItemDetails extends PayPalModel {
 		return this.errors;
 	}
 	
-
-
-	/**
-	 * Setter for errors
-	 */
-	public PayoutItemDetails setErrors(Error errors) {
-		this.errors = errors;
-		return this;
-	}
-
-	/**
-	 * Getter for errors
-	 */
-	public Error getErrors() {
-		return this.errors;
-	}
-
-	/**
-	 * Setter for links
-	 */
-	public PayoutItemDetails setLinks(List<Links> links) {
-		this.links = links;
-		return this;
-	}
-
-	/**
-	 * Getter for links
-	 */
-	public List<Links> getLinks() {
-		return this.links;
-	}
 }

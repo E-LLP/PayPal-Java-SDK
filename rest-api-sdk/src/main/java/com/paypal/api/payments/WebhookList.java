@@ -5,6 +5,13 @@ import com.paypal.base.rest.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class WebhookList  extends PayPalResource {
 
 	/**
@@ -17,22 +24,6 @@ public class WebhookList  extends PayPalResource {
 	 */
 	public WebhookList() {
 		webhooks = new ArrayList<Webhook>();
-	}
-
-
-	/**
-	 * Setter for webhooks
-	 */
-	public WebhookList setWebhooks(List<Webhook> webhooks) {
-		this.webhooks = webhooks;
-		return this;
-	}
-
-	/**
-	 * Getter for webhooks
-	 */
-	public List<Webhook> getWebhooks() {
-		return this.webhooks;
 	}
 	
 	/**

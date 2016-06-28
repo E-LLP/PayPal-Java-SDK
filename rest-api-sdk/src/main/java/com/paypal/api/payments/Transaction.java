@@ -3,6 +3,13 @@ package com.paypal.api.payments;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class Transaction extends TransactionBase {
 
 	/**
@@ -16,22 +23,4 @@ public class Transaction extends TransactionBase {
 	public Transaction() {
 		transactions = new ArrayList<Transaction>();
 	}
-
-
-	/**
-	 * Setter for transactions
-	 */
-	public Transaction setTransactions(List<Transaction> transactions) {
-		this.transactions = transactions;
-		return this;
-	}
-
-	/**
-	 * Getter for transactions
-	 */
-	public List<Transaction> getTransactions() {
-		return this.transactions;
-	}
-
-
 }

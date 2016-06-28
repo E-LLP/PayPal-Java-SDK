@@ -2,6 +2,13 @@ package com.paypal.api.payments;
 
 import com.paypal.base.rest.PayPalModel;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class Billing extends PayPalModel {
 
 	/**
@@ -14,21 +21,4 @@ public class Billing extends PayPalModel {
 	 */
 	public Billing() {
 	}
-
-
-	/**
-	 * Setter for billingAgreementId
-	 */
-	public Billing setBillingAgreementId(String billingAgreementId) {
-		this.billingAgreementId = billingAgreementId;
-		return this;
-	}
-
-	/**
-	 * Getter for billingAgreementId
-	 */
-	public String getBillingAgreementId() {
-		return this.billingAgreementId;
-	}
-
 }

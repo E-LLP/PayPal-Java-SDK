@@ -3,6 +3,13 @@ package com.paypal.api.payments;
 import com.paypal.base.rest.PayPalModel;
 
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class Notification  extends PayPalModel {
 
 	/**
@@ -25,54 +32,4 @@ public class Notification  extends PayPalModel {
 	 */
 	public Notification() {
 	}
-
-
-	/**
-	 * Setter for subject
-	 */
-	public Notification setSubject(String subject) {
-		this.subject = subject;
-		return this;
-	}
-
-	/**
-	 * Getter for subject
-	 */
-	public String getSubject() {
-		return this.subject;
-	}
-
-
-	/**
-	 * Setter for note
-	 */
-	public Notification setNote(String note) {
-		this.note = note;
-		return this;
-	}
-
-	/**
-	 * Getter for note
-	 */
-	public String getNote() {
-		return this.note;
-	}
-
-
-	/**
-	 * Setter for sendToMerchant
-	 */
-	public Notification setSendToMerchant(Boolean sendToMerchant) {
-		this.sendToMerchant = sendToMerchant;
-		return this;
-	}
-
-	/**
-	 * Getter for sendToMerchant
-	 */
-	public Boolean getSendToMerchant() {
-		return this.sendToMerchant;
-	}
-
-
 }

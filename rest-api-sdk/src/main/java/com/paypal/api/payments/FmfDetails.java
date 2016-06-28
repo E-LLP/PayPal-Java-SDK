@@ -1,5 +1,12 @@
 package com.paypal.api.payments;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Accessors(chain = true)
 public class FmfDetails {
 
 	/**
@@ -21,41 +28,4 @@ public class FmfDetails {
 	 * Description of the filter.
 	 */
 	private String description;
-	
-	
-	public String getFilterType() {
-		return filterType;
-	}
-
-	public FmfDetails setFilterType(String filterType) {
-		this.filterType = filterType;
-		return this;
-	}
-
-	public String getFilterId() {
-		return filterId;
-	}
-
-	public FmfDetails setFilterId(String filterId) {
-		this.filterId = filterId;
-		return this;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public FmfDetails setName(String name) {
-		this.name = name;
-		return this;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public FmfDetails setDescription(String description) {
-		this.description = description;
-		return this;
-	}
 }
